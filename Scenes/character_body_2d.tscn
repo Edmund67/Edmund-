@@ -1,3 +1,76 @@
 [gd_scene format=3 uid="uid://hstyjcgyofgc"]
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=273579730]
+[ext_resource type="Script" uid="uid://jaejcme44rar" path="res://Scenes/CharacterBody2d.cs" id="1_88kja"]
+[ext_resource type="Texture2D" uid="uid://cghbe5r57refi" path="res://Scenes/pixel-art-man-walking-sprite-sheet-set-classic-showing-male-character-animation-frames-game-design-471317935-Photoroom.png" id="1_ymxaj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_88kja"]
+atlas = ExtResource("1_ymxaj")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_it8n0"]
+atlas = ExtResource("1_ymxaj")
+region = Rect2(256, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gbyq6"]
+atlas = ExtResource("1_ymxaj")
+region = Rect2(512, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pbq55"]
+atlas = ExtResource("1_ymxaj")
+region = Rect2(0, 256, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t38ji"]
+atlas = ExtResource("1_ymxaj")
+region = Rect2(256, 256, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pbj7x"]
+atlas = ExtResource("1_ymxaj")
+region = Rect2(512, 256, 256, 256)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_efi32"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_88kja")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_it8n0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gbyq6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pbq55")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t38ji")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pbj7x")
+}],
+"loop": 1,
+"name": &"new_animation",
+"speed": 12.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_efi32"]
+size = Vector2(138.5, 210)
+
+[node name="Player" type="CharacterBody2D" unique_id=273579730]
+scale = Vector2(0.6078073, 0.4278628)
+script = ExtResource("1_88kja")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=934695648]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=963568326]
+position = Vector2(4.999998, -4)
+scale = Vector2(0.953125, 1)
+sprite_frames = SubResource("SpriteFrames_efi32")
+animation = &"new_animation"
+autoplay = "new_animation"
+frame = 3
+frame_progress = 0.8591847
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1412391338]
+position = Vector2(13.75, -3)
+shape = SubResource("RectangleShape2D_efi32")
