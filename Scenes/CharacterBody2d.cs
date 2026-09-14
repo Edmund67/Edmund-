@@ -1,10 +1,12 @@
 using Godot;
 using System;
 
-public partial class CharacterBody2d : CharacterBody2D
+public partial class Player : CharacterBody2D
 {
 	public const float Speed = 300.0f;
 	public const float JumpVelocity = -400.0f;
+	[Export]
+	public AnimatedSprite2D Sprite;
 
 	public override void _PhysicsProcess(double delta)
 	{
@@ -28,10 +30,15 @@ public partial class CharacterBody2d : CharacterBody2D
 		if (direction != Vector2.Zero)
 		{
 			velocity.X = direction.X * Speed;
+			// play sprite animation
+			 Sprite.Play("Move");
+			
 		}
 		else
 		{
 			velocity.X = Mathf.MoveToward(Velocity.X, 0, Speed);
+			//stop sprite animation
+			Sprite.Stop();
 		}
 
 		Velocity = velocity;
