@@ -13,7 +13,6 @@ config_version=5
 config/name="Edmund platformer"
 run/main_scene="uid://cowgnm7bl7yuv"
 config/features=PackedStringArray("4.7", "C#", "Forward Plus")
-config/icon="res://icon.svg"
 
 [display]
 
@@ -30,4 +29,5 @@ project/assembly_name="Edmund platformer"
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
