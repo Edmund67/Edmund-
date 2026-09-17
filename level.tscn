@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://76h5b6iwakv2" path="res://Scenes/Tiles/Tiles/Assets/Background_1.png" id="2_0b4ue"]
 [ext_resource type="PackedScene" uid="uid://hstyjcgyofgc" path="res://Scenes/Player.tscn" id="2_vonw3"]
 [ext_resource type="Texture2D" uid="uid://dvlwmu2hplvh0" path="res://Scenes/Tiles/Tiles/Assets/Background_2.png" id="3_oi3di"]
+[ext_resource type="PackedScene" uid="uid://dklw38lmxon5l" path="res://Portal.tscn" id="6_1ainy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vonw3"]
 texture = ExtResource("1_u52ul")
@@ -845,8 +846,6 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_vonw3")
 sources/1 = SubResource("TileSetAtlasSource_f2txt")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_efi32"]
-
 [node name="Level1" type="Node2D" unique_id=713561788]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=2002266571]
@@ -857,14 +856,12 @@ tile_set = SubResource("TileSet_5xgho")
 position = Vector2(18.000002, -48)
 scale = Vector2(1.2660806, 0.91527385)
 
-[node name="Area2D" type="Area2D" parent="." unique_id=2144324711]
-position = Vector2(1029, 52)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=740553665]
-shape = SubResource("RectangleShape2D_efi32")
-
 [node name="Background2" type="Sprite2D" parent="." unique_id=1753885722]
 z_index = -5
 position = Vector2(519, -175.50002)
 scale = Vector2(3.2258065, 2.5110292)
 texture = ExtResource("3_oi3di")
+
+[node name="Area2D2" parent="." unique_id=1862334760 instance=ExtResource("6_1ainy")]
+position = Vector2(1031, 47)
+TargetScenePath = "res://level_2.tscn"

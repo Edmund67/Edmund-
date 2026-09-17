@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dklw38lmxon5l"]
+
+[ext_resource type="Texture2D" uid="uid://djdjavcp6fseq" path="res://Scenes/Dimensional_Portal.png" id="1_0uoaj"]
+[ext_resource type="Script" uid="uid://c8r6s3uf8xgqk" path="res://Portal.cs" id="1_xhpfr"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_efi32"]
+height = 40.0
+
+[node name="Area2D" type="Area2D" unique_id=1862334760]
+script = ExtResource("1_xhpfr")
+
+[node name="DimensionalPortal" type="Sprite2D" parent="." unique_id=337088174]
+position = Vector2(-2, 1.000001)
+scale = Vector2(1.4895835, 1.25)
+texture = ExtResource("1_0uoaj")
+hframes = 3
+vframes = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1788206214]
+shape = SubResource("CapsuleShape2D_efi32")
+
+[connection signal="body_entered" from="." to="." method="OnBodyEntered"]
