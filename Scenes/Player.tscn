@@ -161,7 +161,6 @@ animations = [{
 size = Vector2(21.388374, 37.395164)
 
 [node name="Player" type="CharacterBody2D" unique_id=273579730 node_paths=PackedStringArray("Sprite")]
-position = Vector2(0, 1)
 scale = Vector2(0.6078073, 0.4278628)
 script = ExtResource("1_88kja")
 Sprite = NodePath("AnimatedSprite2D")

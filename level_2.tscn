@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://sxc85wy6sh0p"]
 
 [ext_resource type="Texture2D" uid="uid://cbb6kuw3r3vnj" path="res://Scenes/Tiles/Tiles/Assets/Assets.png" id="1_jg0dc"]
+[ext_resource type="Script" uid="uid://jaejcme44rar" path="res://Scenes/Player.cs" id="1_nmjpi"]
+[ext_resource type="PackedScene" uid="uid://dklw38lmxon5l" path="res://Portal.tscn" id="3_xdadj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nmjpi"]
 texture = ExtResource("1_jg0dc")
@@ -633,9 +635,13 @@ sources/0 = SubResource("TileSetAtlasSource_nmjpi")
 
 [node name="Level2" type="Node" unique_id=1298375730]
 
+[node name="player" type="CharacterBody2D" parent="." unique_id=706861286]
+script = ExtResource("1_nmjpi")
+
 [node name="TileMap" type="TileMap" parent="." unique_id=1259344702]
 tile_set = SubResource("TileSet_a72st")
 format = 2
 layer_0/tile_data = PackedInt32Array(2, 393216, 1610612745, 3, 393216, 1610612745, 4, 524288, 1610612746, 5, 524288, 1610612746, 6, 393216, 805306376, 65538, 589824, 1342177297, 65539, 589824, 1342177298, 65541, 589824, 1342177298)
 
-[node name="Area2D" type="Area2D" parent="TileMap" unique_id=1689557630]
+[node name="Area2D2" parent="." unique_id=1862334760 instance=ExtResource("3_xdadj")]
+position = Vector2(50, -20)
