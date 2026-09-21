@@ -863,5 +863,5 @@ scale = Vector2(5.2031255, 3.5845587)
 texture = ExtResource("3_oi3di")
 
 [node name="Area2D2" parent="." unique_id=1862334760 instance=ExtResource("6_1ainy")]
-position = Vector2(404, -78)
+position = Vector2(395, -49)
 TargetScenePath = "res://level_2.tscn"

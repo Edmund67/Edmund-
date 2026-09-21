@@ -32,7 +32,7 @@ public partial class Player : CharacterBody2D
 		{
 			velocity.X = direction.X * Speed;
 			// play sprite animation
-			 Sprite.Play("Move");
+			 Sprite.Play("Run");
 			 Sprite.FlipH = direction.X < 0;
 			 
 		}

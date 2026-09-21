@@ -1,8 +1,11 @@
 [gd_scene format=3 uid="uid://sxc85wy6sh0p"]
 
 [ext_resource type="Texture2D" uid="uid://cbb6kuw3r3vnj" path="res://Scenes/Tiles/Tiles/Assets/Assets.png" id="1_jg0dc"]
-[ext_resource type="Script" uid="uid://jaejcme44rar" path="res://Scenes/Player.cs" id="1_nmjpi"]
+[ext_resource type="PackedScene" uid="uid://hstyjcgyofgc" path="res://Scenes/Player.tscn" id="1_xdadj"]
 [ext_resource type="PackedScene" uid="uid://dklw38lmxon5l" path="res://Portal.tscn" id="3_xdadj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n6ha1"]
+size = Vector2(20, 39.73236)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nmjpi"]
 texture = ExtResource("1_jg0dc")
@@ -635,8 +638,14 @@ sources/0 = SubResource("TileSetAtlasSource_nmjpi")
 
 [node name="Level2" type="Node" unique_id=1298375730]
 
-[node name="player" type="CharacterBody2D" parent="." unique_id=706861286]
-script = ExtResource("1_nmjpi")
+[node name="Player" parent="." unique_id=273579730 instance=ExtResource("1_xdadj")]
+position = Vector2(47.000004, -17.999998)
+script = null
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Player" unique_id=1428453601]
+position = Vector2(0, 17.52898)
+scale = Vector2(0.9999998, 1)
+shape = SubResource("RectangleShape2D_n6ha1")
 
 [node name="TileMap" type="TileMap" parent="." unique_id=1259344702]
 tile_set = SubResource("TileSet_a72st")
@@ -644,4 +653,4 @@ format = 2
 layer_0/tile_data = PackedInt32Array(2, 393216, 1610612745, 3, 393216, 1610612745, 4, 524288, 1610612746, 5, 524288, 1610612746, 6, 393216, 805306376, 65538, 589824, 1342177297, 65539, 589824, 1342177298, 65541, 589824, 1342177298)
 
 [node name="Area2D2" parent="." unique_id=1862334760 instance=ExtResource("3_xdadj")]
-position = Vector2(50, -20)
+position = Vector2(48, -20)
