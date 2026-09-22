@@ -3,6 +3,34 @@
 [ext_resource type="Script" uid="uid://jaejcme44rar" path="res://Scenes/Player.cs" id="1_88kja"]
 [ext_resource type="Texture2D" uid="uid://cs60tp4jq1f8e" path="res://Scenes/male_hero_free (1)/male_hero.png" id="2_kyqiw"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_x63xi"]
+atlas = ExtResource("2_kyqiw")
+region = Rect2(0, 768, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i2e8t"]
+atlas = ExtResource("2_kyqiw")
+region = Rect2(128, 768, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qidb7"]
+atlas = ExtResource("2_kyqiw")
+region = Rect2(256, 768, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_70hv0"]
+atlas = ExtResource("2_kyqiw")
+region = Rect2(0, 896, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8flut"]
+atlas = ExtResource("2_kyqiw")
+region = Rect2(128, 896, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u7x0b"]
+atlas = ExtResource("2_kyqiw")
+region = Rect2(256, 896, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_utwlt"]
+atlas = ExtResource("2_kyqiw")
+region = Rect2(384, 896, 128, 128)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_gntrk"]
 atlas = ExtResource("2_kyqiw")
 region = Rect2(0, 128, 128, 128)
@@ -87,6 +115,32 @@ region = Rect2(1152, 384, 128, 128)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_x63xi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i2e8t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qidb7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_70hv0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8flut")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u7x0b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_utwlt")
+}],
+"loop": 1,
+"name": &"Combo 1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_gntrk")
 }, {
 "duration": 1.0,
@@ -157,7 +211,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_efi32"]
-size = Vector2(41.13153, 39.73236)
+size = Vector2(19.743143, 37.395164)
 
 [node name="Player" type="CharacterBody2D" unique_id=273579730 node_paths=PackedStringArray("Sprite")]
 scale = Vector2(0.6078073, 0.4278628)
@@ -171,12 +225,14 @@ zoom = Vector2(3, 3)
 position = Vector2(0, 2.3371978)
 scale = Vector2(0.953125, 1)
 sprite_frames = SubResource("SpriteFrames_efi32")
-animation = &"Run"
-frame_progress = 0.81970125
+animation = &"Combo 1"
+frame_progress = 0.8129433
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1412391338]
-position = Vector2(0.8226276, 1.168599)
-scale = Vector2(0.99999815, 1)
+position = Vector2(-7.845201e-07, 9.05501e-07)
+scale = Vector2(0.9999977, 1)
 shape = SubResource("RectangleShape2D_efi32")
 
 [node name="Timer" type="Timer" parent="." unique_id=2079167944]
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="OnAnimationFinished"]
