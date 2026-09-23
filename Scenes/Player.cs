@@ -73,8 +73,9 @@ public partial class Player : CharacterBody2D
         MoveAndSlide();
     }
 
-    private void OnAnimationFinished()
+    public void OnAnimationFinished()
     {
+        GD.Print("Animation Finished");
         // Reset the attacking flag when the attack animation completes
         if (Sprite.Animation == "Combo 1")
         {

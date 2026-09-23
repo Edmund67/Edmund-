@@ -135,7 +135,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_utwlt")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"Combo 1",
 "speed": 5.0
 }, {
@@ -226,7 +226,6 @@ position = Vector2(0, 2.3371978)
 scale = Vector2(0.953125, 1)
 sprite_frames = SubResource("SpriteFrames_efi32")
 animation = &"Combo 1"
-frame_progress = 0.8129433
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1412391338]
 position = Vector2(-7.845201e-07, 9.05501e-07)

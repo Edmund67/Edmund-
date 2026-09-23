@@ -3,24 +3,23 @@
 [ext_resource type="Script" uid="uid://c8r6s3uf8xgqk" path="res://Portal.cs" id="1_xhpfr"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4hdyq"]
-load_path = "res://.godot/imported/Dimensional_Portal.png-e6793870114364ddc9b7ab3fbaeb70a5.ctex"
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_efi32"]
-radius = 13.0
-height = 46.0
+radius = 8.0
+height = 26.0
 
 [node name="Area2D" type="Area2D" unique_id=1862334760]
 script = ExtResource("1_xhpfr")
 
 [node name="DimensionalPortal" type="Sprite2D" parent="." unique_id=337088174]
 position = Vector2(-2, 1.000001)
-scale = Vector2(1.4895835, 1.25)
+scale = Vector2(1, 0.99999905)
 texture = SubResource("CompressedTexture2D_4hdyq")
 hframes = 3
 vframes = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1788206214]
-position = Vector2(-1, 0)
+position = Vector2(-2, 2)
 shape = SubResource("CapsuleShape2D_efi32")
 
 [connection signal="body_entered" from="." to="." method="OnBodyEntered"]
