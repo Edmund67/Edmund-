@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.Threading.Tasks;
 
 
 public partial class Portal : Area2D
@@ -36,3 +37,4 @@ public partial class Portal : Area2D
 		}
 	}
 }
+

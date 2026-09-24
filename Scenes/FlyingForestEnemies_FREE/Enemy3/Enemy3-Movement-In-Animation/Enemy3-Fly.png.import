@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://uah1uakbqb7x"
-path="res://.godot/imported/trees.png-b7ff11b988659d41fb83149ad4bbefa7.ctex"
+uid="uid://cg48bc7lr1e3f"
+path="res://.godot/imported/Enemy3-Fly.png-8280ed78a1edc080edea2d3ff212e742.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Tiles/Tiles/Assets/trees.png"
-dest_files=["res://.godot/imported/trees.png-b7ff11b988659d41fb83149ad4bbefa7.ctex"]
+source_file="res://Scenes/FlyingForestEnemies_FREE/Enemy3/Enemy3-Movement-In-Animation/Enemy3-Fly.png"
+dest_files=["res://.godot/imported/Enemy3-Fly.png-8280ed78a1edc080edea2d3ff212e742.ctex"]
 
 [params]
 

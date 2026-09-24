@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bd7ewfukkptaq"
-path="res://.godot/imported/Mine.png-333fa6c41204bf5cfef3352088b32cce.ctex"
+uid="uid://dpn3oxtl15ves"
+path="res://.godot/imported/Enemy3-SmashEnd.png-d95d2af49fb7c8b527cad1843fa534c9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Tiles/Tiles/Assets/Mine.png"
-dest_files=["res://.godot/imported/Mine.png-333fa6c41204bf5cfef3352088b32cce.ctex"]
+source_file="res://Scenes/FlyingForestEnemies_FREE/Enemy3/Enemy3-Movement-In-Animation/Enemy3-SmashEnd.png"
+dest_files=["res://.godot/imported/Enemy3-SmashEnd.png-d95d2af49fb7c8b527cad1843fa534c9.ctex"]
 
 [params]
 
