@@ -3,38 +3,70 @@ using System;
 
 public partial class Enemy : CharacterBody2D
 {
-	public const float Speed = 300.0f;
-	public const float JumpVelocity = -400.0f;
+    // Export variables allow you to change these values inside the Godot Inspector
+    [Export] public float Speed { get; set; } = 150.0f;
+    [Export] public int MaxHealth { get; set; } = 100;
+    
+    private int _currentHealth;
+    private Node2D _playerTarget;
 
-	public override void _PhysicsProcess(double delta)
-	{
-		Vector2 velocity = Velocity;
+    // Called when the node enters the scene tree for the first time.
+    public override void _Ready()
+    {
+        _currentHealth = MaxHealth;
 
-		// Add the gravity.
-		if (!IsOnFloor())
-		{
-			velocity += GetGravity() * (float)delta;
-		}
+        // Safely look for the player in the current scene tree
+        // Note: Assumes your player node is named "Player" or belongs to a "player" group
+        _playerTarget = GetTree().GetFirstNodeInGroup("player") as Node2D;
+    }
 
-		// Handle Jump.
-		if (Input.IsActionJustPressed("ui_accept") && IsOnFloor())
-		{
-			velocity.Y = JumpVelocity;
-		}
+    // Called every physics frame. Use this for movement logic.
+    public override void _PhysicsProcess(double delta)
+    {
+        Vector2 velocity = Velocity;
 
-		// Get the input direction and handle the movement/deceleration.
-		// As good practice, you should replace UI actions with custom gameplay actions.
-		Vector2 direction = Input.GetVector("ui_left", "ui_right", "ui_up", "ui_down");
-		if (direction != Vector2.Zero)
-		{
-			velocity.X = direction.X * Speed;
-		}
-		else
-		{
-			velocity.X = Mathf.MoveToward(Velocity.X, 0, Speed);
-		}
+        if (_playerTarget != null)
+        {
+            // Calculate direction toward the player
+            Vector2 direction = (_playerTarget.GlobalPosition - GlobalPosition).Normalized();
+            
+            // Apply speed to the direction
+            velocity = direction * Speed;
+            
+            // Optional: Flip the sprite/graphics depending on movement direction
+            if (direction.X != 0)
+            {
+                // Assuming you have a Sprite2D child node named "Sprite2D"
+                var sprite = GetNode<Sprite2D>("Sprite2D");
+                sprite.FlipH = direction.X < 0;
+            }
+        }
+        else
+        {
+            // Stop moving if no player is found
+            velocity = Vector2.Zero;
+        }
 
-		Velocity = velocity;
-		MoveAndSlide();
-	}
+        Velocity = velocity;
+        MoveAndSlide(); // Handles sliding along walls and collision physics automatically
+    }
+
+    // Public method that can be called by bullets, spells, or player attacks
+    public void TakeDamage(int damageAmount)
+    {
+        _currentHealth -= damageAmount;
+        GD.Print($"{Name} took {damageAmount} damage. Health remaining: {_currentHealth}");
+
+        if (_currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+
+    private void Die()
+    {
+        GD.Print($"{Name} has died.");
+        // QueueFree removes the enemy node from the scene tree safely at the end of the frame
+        QueueFree(); 
+    }
 }

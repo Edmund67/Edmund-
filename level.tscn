@@ -990,13 +990,13 @@ texture = ExtResource("3_1ainy")
 4:4/0 = 0
 4:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 5:4/0 = 0
-5:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, 8, 8, -8, 8)
 6:4/0 = 0
-6:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, 8, 8, -8, 8)
 7:4/0 = 0
-7:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, 8, 8, -8, 8)
 8:4/0 = 0
-8:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, -8, 8, 8, -8, 8)
 9:4/0 = 0
 9:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 11:4/0 = 0
@@ -2098,8 +2098,6 @@ sources/0 = SubResource("TileSetAtlasSource_vonw3")
 sources/1 = SubResource("TileSetAtlasSource_f2txt")
 sources/2 = SubResource("TileSetAtlasSource_n6hdu")
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_efi32"]
-
 [node name="Level1" type="Node2D" unique_id=713561788]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=2002266571]
@@ -2116,13 +2114,9 @@ position = Vector2(546, -7.000003)
 scale = Vector2(3.4221272, 3.5845587)
 texture = ExtResource("3_oi3di")
 
-[node name="Area2D2" parent="." unique_id=1862334760 instance=ExtResource("6_1ainy")]
-position = Vector2(1338, 104)
+[node name="Area2D" parent="." unique_id=1862334760 instance=ExtResource("6_1ainy")]
+position = Vector2(803, -3)
 TargetScenePath = "res://level_2.tscn"
 
 [node name="Enemy" parent="." unique_id=1290290120 instance=ExtResource("7_n6hdu")]
-position = Vector2(1029, 40)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy" unique_id=458545389]
-position = Vector2(0, -1)
-shape = SubResource("CircleShape2D_efi32")
+position = Vector2(1015, 37)
