@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://dvlwmu2hplvh0" path="res://Scenes/Tiles/Tiles/Assets/Background_2.png" id="3_oi3di"]
 [ext_resource type="PackedScene" uid="uid://dklw38lmxon5l" path="res://Portal.tscn" id="6_1ainy"]
 [ext_resource type="PackedScene" uid="uid://bqk46020dm31u" path="res://enemy.tscn" id="7_n6hdu"]
+[ext_resource type="Script" uid="uid://igih2bqpskf8" path="res://Enemy.cs" id="8_km5ld"]
+[ext_resource type="Script" uid="uid://jsn5ra2q1eex" path="res://Area2d2.cs" id="9_i2t4f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vonw3"]
 texture = ExtResource("1_u52ul")
@@ -2098,6 +2100,10 @@ sources/0 = SubResource("TileSetAtlasSource_vonw3")
 sources/1 = SubResource("TileSetAtlasSource_f2txt")
 sources/2 = SubResource("TileSetAtlasSource_n6hdu")
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_efi32"]
+normal = Vector2(-0.0051019746, -0.999987)
+distance = -421.9767
+
 [node name="Level1" type="Node2D" unique_id=713561788]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=2002266571]
@@ -2120,3 +2126,12 @@ TargetScenePath = "res://level_2.tscn"
 
 [node name="Enemy" parent="." unique_id=1290290120 instance=ExtResource("7_n6hdu")]
 position = Vector2(1015, 37)
+script = ExtResource("8_km5ld")
+
+[node name="Area2D2" type="Area2D" parent="." unique_id=465966915]
+position = Vector2(1015, 37)
+script = ExtResource("9_i2t4f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=390922030]
+position = Vector2(-379, -131)
+shape = SubResource("WorldBoundaryShape2D_efi32")
