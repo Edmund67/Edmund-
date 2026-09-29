@@ -2125,13 +2125,15 @@ position = Vector2(803, -3)
 TargetScenePath = "res://level_2.tscn"
 
 [node name="Enemy" parent="." unique_id=1290290120 instance=ExtResource("7_n6hdu")]
-position = Vector2(1015, 37)
+position = Vector2(593, 39)
 script = ExtResource("8_km5ld")
 
 [node name="Area2D2" type="Area2D" parent="." unique_id=465966915]
-position = Vector2(1015, 37)
+position = Vector2(593, 50)
 script = ExtResource("9_i2t4f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=390922030]
-position = Vector2(-379, -131)
+position = Vector2(-372, -153)
 shape = SubResource("WorldBoundaryShape2D_efi32")
+
+[connection signal="body_entered" from="Area2D2" to="Area2D2" method="OnBodyEntered"]
