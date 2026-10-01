@@ -1440,10 +1440,6 @@ public partial class Area2d2 : Area2D
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_efi32"]
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_efi32"]
-normal = Vector2(-0.0051019746, -0.999987)
-distance = -421.9767
-
 [node name="Level1" type="Node2D" unique_id=713561788]
 
 [node name="Background2" type="Sprite2D" parent="." unique_id=1958232701]
@@ -1484,14 +1480,8 @@ shape = SubResource("CircleShape2D_efi32")
 [node name="Enemy" parent="Player1/Area2D2" unique_id=1290290120 instance=ExtResource("6_n6hdu")]
 position = Vector2(-89, 0)
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Player1" unique_id=390922030]
-visible = false
-position = Vector2(216, 14)
-shape = SubResource("WorldBoundaryShape2D_efi32")
-
 [node name="Portal" parent="." unique_id=1862334760 instance=ExtResource("6_1ainy")]
-visible = false
-position = Vector2(813, 22)
+position = Vector2(867, 3)
 TargetScenePath = "res://level_2.tscn"
 
 [connection signal="body_entered" from="Player1/Area2D2" to="Player1/Area2D2" method="OnBodyEntered"]
