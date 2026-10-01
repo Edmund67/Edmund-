@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://bqk46020dm31u"]
+[gd_scene format=3 uid="uid://lsjpfdsh2eur"]
 
-[ext_resource type="Texture2D" uid="uid://c3lawj7r8c4np" path="res://SLIME ANIMATION_STRIP/SLIME PLATFORMER_STRIP_Idle.png" id="1_7k104"]
+[ext_resource type="Texture2D" uid="uid://c3lawj7r8c4np" path="res://Tiles/Assets/SLIME ANIMATION_STRIP/SLIME PLATFORMER_STRIP_Idle.png" id="1_7k104"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4gyqm"]
 atlas = ExtResource("1_7k104")
@@ -71,9 +71,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_n6ha1"]
-radius = 30.016663
-
 [node name="Enemy" type="CharacterBody2D" unique_id=1290290120]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2026569104]
@@ -81,6 +78,3 @@ position = Vector2(2, 1)
 sprite_frames = SubResource("SpriteFrames_efi32")
 animation = &"Walk"
 autoplay = "Idle "
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1374839716]
-shape = SubResource("CircleShape2D_n6ha1")

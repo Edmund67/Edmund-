@@ -1,11 +1,9 @@
 [gd_scene format=4 uid="uid://hbl08c85nxag"]
 
-[ext_resource type="Texture2D" uid="uid://dvlwmu2hplvh0" path="res://Scenes/Tiles/Tiles/Assets/Background_2.png" id="1_1fhj5"]
-[ext_resource type="Texture2D" uid="uid://cbb6kuw3r3vnj" path="res://Scenes/Tiles/Tiles/Assets/Assets.png" id="1_16pka"]
-[ext_resource type="Texture2D" uid="uid://76h5b6iwakv2" path="res://Scenes/Tiles/Tiles/Assets/Background_1.png" id="2_16pka"]
+[ext_resource type="Texture2D" uid="uid://d3jss7bwugexr" path="res://Tiles/Assets/Assets.png" id="1_ayd5w"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j8bo8"]
-texture = ExtResource("1_16pka")
+texture = ExtResource("1_ayd5w")
 2:0/0 = 0
 3:0/0 = 0
 4:0/0 = 0
@@ -638,11 +636,9 @@ sources/0 = SubResource("TileSetAtlasSource_j8bo8")
 
 [node name="Background2" type="Sprite2D" parent="." unique_id=1472076736]
 position = Vector2(254, 47)
-texture = ExtResource("1_1fhj5")
 
 [node name="Background1" type="Sprite2D" parent="." unique_id=421356290]
 position = Vector2(254, 46)
-texture = ExtResource("2_16pka")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="Background1" unique_id=354960176]
 position = Vector2(-257, -42)
