@@ -152,5 +152,5 @@ shape = SubResource("CircleShape2D_n6ha1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CollisionShape2D" unique_id=570526814]
 sprite_frames = SubResource("SpriteFrames_efi32")
-animation = &"Move "
-frame_progress = 0.29271773
+animation = &"Idle"
+autoplay = "Idle"

@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://hbl08c85nxag"]
 
 [ext_resource type="Texture2D" uid="uid://d3jss7bwugexr" path="res://Tiles/Assets/Assets.png" id="1_ayd5w"]
+[ext_resource type="PackedScene" uid="uid://d2fyl1fesce0t" path="res://enemy.tscn" id="2_1fhj5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j8bo8"]
 texture = ExtResource("1_ayd5w")
@@ -644,3 +645,15 @@ position = Vector2(254, 46)
 position = Vector2(-257, -42)
 tile_map_data = PackedByteArray("AAACAAkAAAADAAAAAAADAAkAAAADAAAAAAAEAAkAAAADAAAAAAAFAAkAAAADAAAAAAAGAAkAAAADAAAAAAAHAAkAAAADAAAAAAAIAAkAAAADAAAAAAAJAAkAAAADAAAAAAAKAAkAAAADAAAAAAALAAkAAAADAAAAAAAMAAkAAAADAAAAAAANAAkAAAADAAAAAAAOAAkAAAADAAAAAAAPAAkAAAADAAAAAAAQAAkAAAADAAAAAAARAAkAAAADAAAAAAASAAkAAAADAAAAAAATAAkAAAADAAAAAAAUAAkAAAADAAAAAAAVAAkAAAADAAAAAAAWAAkAAAADAAAAAAAXAAkAAAADAAAAAAAYAAkAAAADAAAAAAAZAAkAAAADAAAAAAAaAAkAAAADAAAAAAAbAAkAAAADAAAAAAAcAAkAAAADAAAAAAAdAAkAAAADAAAAAAABAAkAAAADAAAAAAA=")
 tile_set = SubResource("TileSet_1fhj5")
+
+[node name="Enemy" parent="." unique_id=1290290120 instance=ExtResource("2_1fhj5")]
+position = Vector2(95, 132)
+
+[node name="Enemy2" parent="." unique_id=956978076 instance=ExtResource("2_1fhj5")]
+position = Vector2(196, 132)
+
+[node name="Enemy3" parent="." unique_id=367882121 instance=ExtResource("2_1fhj5")]
+position = Vector2(295, 134)
+
+[node name="Enemy4" parent="." unique_id=1254327595 instance=ExtResource("2_1fhj5")]
+position = Vector2(405, 132)
