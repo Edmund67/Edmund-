@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class Slime : CharacterBody2D
+public partial class Enemy : CharacterBody2D
 {
     [Export] public float Speed { get; set; } = 60.0f;
     [Export] public float Gravity { get; set; } = 900.0f;
@@ -36,5 +36,11 @@ public partial class Slime : CharacterBody2D
                 sprite.FlipH = _direction < 0;
             }
         }
+    }
+
+    public void KillPlayer(Node2D node)
+    {
+        if (node is Player)
+            GetTree().ReloadCurrentScene();
     }
 }

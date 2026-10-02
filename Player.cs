@@ -33,7 +33,7 @@ public partial class Player : CharacterBody2D
             velocity += GetGravity() * (float)delta;
         }
 
-        if (Input.IsActionJustPressed("ui_attack") && !_isAttacking) // Fixed: common input map naming
+        if (Input.IsActionJustPressed("Attack") && !_isAttacking) // Fixed: common input map naming
         {
             _isAttacking = true;
             Sprite.Play("Combo 1");
@@ -71,7 +71,7 @@ public partial class Player : CharacterBody2D
     private void OnBodyEntered(Node2D body)
     {
         // Check if the thing we hit is named "Slime" or belongs to a Slime class
-        if (body.Name.ToString().Contains("Enemy") || body is Slime) 
+        if (body.Name.ToString().Contains("Enemy") || body is Enemy) 
         {
             GD.Print("Player hit a Enemy! Player dies.");
             Die();
