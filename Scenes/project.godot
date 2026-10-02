@@ -15,7 +15,7 @@ general/updates_per_second=100
 [application]
 
 config/name="Edmund platformer"
-run/main_scene="uid://dxw5rq5hok6as"
+run/main_scene="uid://cowgnm7bl7yuv"
 config/features=PackedStringArray("4.7", "C#", "Forward Plus")
 
 [display]
@@ -52,7 +52,7 @@ left={
 "events": [Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":14,"pressure":0.0,"pressed":false,"script":null)
 ]
 }
-Attack={
+"Attack "={
 "deadzone": 0.2,
 "events": [Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":0,"pressure":0.0,"pressed":true,"script":null)
 ]

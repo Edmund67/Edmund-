@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbgmfnsxowtsb"
-path="res://.godot/imported/10.2.2.png-b1e96fd31c5e554843927fccdbd388f2.ctex"
+uid="uid://b52boabx771r0"
+path="res://.godot/imported/SLIME PLATFORMER_STRIP_JumpGround.png-21c9427ae2e3bda124f943cc9ca55798.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://10.2.2.png"
-dest_files=["res://.godot/imported/10.2.2.png-b1e96fd31c5e554843927fccdbd388f2.ctex"]
+source_file="res://Tiles/Assets/SLIME ANIMATION_STRIP/SLIME PLATFORMER_STRIP_JumpGround.png"
+dest_files=["res://.godot/imported/SLIME PLATFORMER_STRIP_JumpGround.png-21c9427ae2e3bda124f943cc9ca55798.ctex"]
 
 [params]
 

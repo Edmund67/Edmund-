@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbgmfnsxowtsb"
-path="res://.godot/imported/10.2.2.png-b1e96fd31c5e554843927fccdbd388f2.ctex"
+uid="uid://djrwkxnsc8juc"
+path="res://.godot/imported/SLIME PLATFORMER_STRIP_WalkTurn.png-b1f52607b36564d2374ddb564d7b4c3b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://10.2.2.png"
-dest_files=["res://.godot/imported/10.2.2.png-b1e96fd31c5e554843927fccdbd388f2.ctex"]
+source_file="res://Tiles/Assets/SLIME ANIMATION_STRIP/SLIME PLATFORMER_STRIP_WalkTurn.png"
+dest_files=["res://.godot/imported/SLIME PLATFORMER_STRIP_WalkTurn.png-b1f52607b36564d2374ddb564d7b4c3b.ctex"]
 
 [params]
 

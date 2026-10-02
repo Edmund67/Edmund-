@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbgmfnsxowtsb"
-path="res://.godot/imported/10.2.2.png-b1e96fd31c5e554843927fccdbd388f2.ctex"
+uid="uid://b7fcxyp30srjm"
+path="res://.godot/imported/IDLE.png-dada4c5bed23a4062b80f3268dd33d63.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://10.2.2.png"
-dest_files=["res://.godot/imported/10.2.2.png-b1e96fd31c5e554843927fccdbd388f2.ctex"]
+source_file="res://Tiles/Assets/FREE_Samurai 2D Pixel Art v1.2/Sprites/IDLE.png"
+dest_files=["res://.godot/imported/IDLE.png-dada4c5bed23a4062b80f3268dd33d63.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbgmfnsxowtsb"
-path="res://.godot/imported/10.2.2.png-b1e96fd31c5e554843927fccdbd388f2.ctex"
+uid="uid://03hjrsfn0lx3"
+path="res://.godot/imported/SLIME PLATFORMER_STRIP_HurtB.png-a9919239a23f893f6201a100a7104ae3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://10.2.2.png"
-dest_files=["res://.godot/imported/10.2.2.png-b1e96fd31c5e554843927fccdbd388f2.ctex"]
+source_file="res://Tiles/Assets/SLIME ANIMATION_STRIP/SLIME PLATFORMER_STRIP_HurtB.png"
+dest_files=["res://.godot/imported/SLIME PLATFORMER_STRIP_HurtB.png-a9919239a23f893f6201a100a7104ae3.ctex"]
 
 [params]
 
