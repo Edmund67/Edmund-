@@ -15,6 +15,7 @@ general/updates_per_second=100
 [application]
 
 config/name="Edmund platformer"
+run/main_scene="uid://bg2b846a3lxpu"
 config/features=PackedStringArray("4.7", "C#", "Forward Plus")
 
 [display]

@@ -5,4 +5,7 @@
     <EnableDynamicLoading>true</EnableDynamicLoading>
     <RootNamespace>Edmundplatformer</RootNamespace>
   </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Scenes\" />
+  </ItemGroup>
 </Project>

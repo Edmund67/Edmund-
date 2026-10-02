@@ -1,7 +1,11 @@
 [gd_scene format=3 uid="uid://diyl7rmyy1n24"]
 
+[ext_resource type="Script" uid="uid://dstrme3r8l5pc" path="res://Player.cs" id="1_kne1u"]
 [ext_resource type="Texture2D" uid="uid://b7fcxyp30srjm" path="res://Tiles/Assets/FREE_Samurai 2D Pixel Art v1.2/Sprites/IDLE.png" id="1_kpjcp"]
 [ext_resource type="Texture2D" uid="uid://lhto8qk0jpf8" path="res://Tiles/Assets/FREE_Samurai 2D Pixel Art v1.2/Sprites/RUN.png" id="2_kne1u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_efi32"]
+size = Vector2(25, 40)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qujof"]
 atlas = ExtResource("1_kpjcp")
@@ -194,19 +198,19 @@ animations = [{
 "texture": SubResource("AtlasTexture_itxgx")
 }],
 "loop": 1,
-"name": &"Run ",
+"name": &"Run",
 "speed": 10.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_efi32"]
-size = Vector2(25, 40)
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=317132869]
-sprite_frames = SubResource("SpriteFrames_efi32")
-animation = &"Run "
-autoplay = "Idle"
-frame_progress = 0.7663077
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=2056154840 node_paths=PackedStringArray("Sprite")]
+script = ExtResource("1_kne1u")
+Sprite = NodePath("AnimatedSprite2D")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=567509846]
 position = Vector2(5.5, 17)
 shape = SubResource("RectangleShape2D_efi32")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=317132869]
+sprite_frames = SubResource("SpriteFrames_efi32")
+animation = &"Run"
+autoplay = "Idle"

@@ -1,49 +1,7 @@
 [gd_scene format=3 uid="uid://ca3vm30fjhjgm"]
 
+[ext_resource type="Script" uid="uid://c8r6s3uf8xgqk" path="res://Portal.cs" id="1_bagdj"]
 [ext_resource type="Texture2D" uid="uid://blf65d3b6it1d" path="res://Dimensional_Portal.png" id="2_bagdj"]
-
-[sub_resource type="CSharpScript" id="CSharpScript_0a16l"]
-script/source = "using Godot;
-using System;
-using System.Threading.Tasks;
-
-
-public partial class Portal : Area2D
-{
-	// Export the target scene path so you can set it uniquely in the Inspector
-	[Export]
-	public string TargetScenePath { get; set; }
-	
-
-	private void OnBodyEntered(Node2D body)
-	{
-		// Option A: Check if the colliding body is in the \"Player\" group
-		if (body is Player)
-		{
-			ActivatePortal();
-		}
-		
-		// Option B: Alternatively, check by class type
-		// if (body is CharacterBody2D) { ActivatePortal(); }
-	}
-
-	private void ActivatePortal()
-	{
-		GD.Print(\"Portal Activated! Teleporting player...\");
-
-		if (!string.IsNullOrEmpty(TargetScenePath))
-		{
-			// Change to the new level or area
-			GetTree().ChangeSceneToFile(TargetScenePath);
-		}
-		else
-		{
-			GD.PrintErr(\"Target scene path is empty!\");
-		}
-	}
-}
-
-"
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_efi32"]
 radius = 28.0
@@ -101,7 +59,7 @@ animations = [{
 
 [node name="Area2D" type="Area2D" unique_id=1862334760]
 position = Vector2(598, -42)
-script = SubResource("CSharpScript_0a16l")
+script = ExtResource("1_bagdj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1788206214]
 position = Vector2(533, 81)
@@ -113,6 +71,6 @@ scale = Vector2(3.5078127, 3.0234377)
 sprite_frames = SubResource("SpriteFrames_efi32")
 animation = &"Idle "
 autoplay = "Idle "
-frame_progress = 0.31770366
+frame_progress = 0.3441132
 
 [connection signal="body_entered" from="." to="." method="OnBodyEntered"]
